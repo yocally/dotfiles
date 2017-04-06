@@ -1,0 +1,74 @@
+
+[colors]
+background = #000
+background-alt = #393741
+foreground = #dfdfdf
+foreground-alt = #55
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+[bar/main]
+width = 100%
+height = 17
+override-redirect = false
+
+monitor = DP-5
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+overline-size = 2
+overline-color = #f00
+underline-size = 2
+underline-color = #00f
+
+border-bottom = 0
+border-bottom-color = #333
+
+spacing = 1
+padding-left = 0
+padding-right = 2
+module-margin-left = 2
+module-margin-right = 2
+
+font-0 = arimo:pixelsize=14
+modules-left = i3 mpd
+modules-center = date
+modules-right = volume cpu eth
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+[module/date]
+type = internal/date
+interval = 5
+date = "%H:%M - %a - %m/%d"
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+
+[module/eth]
+type = internal/network
+interface = enp0s31f6
+interval = 3
+label-connected = %local_ip%
+label-disconnected = offline
+
+[module/mpd]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+interval = 2
+
+[module/volume]
+type = internal/volume
+master-mixer = Master

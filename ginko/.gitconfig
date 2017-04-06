@@ -1,0 +1,9 @@
+[user]
+	name = Cally Sibben
+	email = themodempress@gmail.com
+[core]
+	editor = vi
+[alias]
+	comie = commit -a
+	lineup = remote prune origin
+	newpush = push --set-upstream origin master

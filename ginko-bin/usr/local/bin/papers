@@ -1,0 +1,3 @@
+nitrogen --head=0 --random ~/Wallpapers --set-scaled
+nitrogen --head=1 --random ~/Wallpapers --set-scaled
+nitrogen --head=2 --random ~/Wallpapers --set-scaled

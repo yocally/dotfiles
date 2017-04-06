@@ -1,0 +1,14 @@
+#! /bin/bash
+
+sxhkd &
+
+bspc monitor DVI-D-0 -d IV V VI
+bspc monitor DP-5 -d I II III
+bspc monitor HDMI-0 -d VII VIII IX
+
+bspc config border_width	10
+bspc config window_gap		10
+
+bspc config split_ration	0.52
+
+polybar main &
