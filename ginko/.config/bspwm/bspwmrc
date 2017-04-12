@@ -11,4 +11,6 @@ bspc config window_gap		10
 
 bspc config split_ration	0.52
 
+seq 0 2 | xargs -l1 -I@ compton -b -d :0.@
+
 polybar main &

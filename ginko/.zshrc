@@ -89,7 +89,8 @@ alias ncp="ncmpcpp"
 alias xclip="xclip -selection c"
 alias ssh="ssh -X"
 alias vi="vim"
+# alias gcc="gcc-5"
 
 export PATH=$PATH:$HOME/.cargo/bin
 export GOPATH=$HOME/.go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin

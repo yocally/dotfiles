@@ -7,3 +7,5 @@
 	comie = commit -a
 	lineup = remote prune origin
 	newpush = push --set-upstream origin master
+[gui]
+	recentrepo = /home/csibben/dotfiles

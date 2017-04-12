@@ -1,73 +1,47 @@
+[bar/i3-main]
 
-[colors]
-background = #000
-background-alt = #393741
-foreground = #dfdfdf
-foreground-alt = #55
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
-
-[global/wm]
-margin-top = 0
-margin-bottom = 0
-
-[bar/main]
 width = 100%
-height = 17
+height = 20
 override-redirect = false
 
-monitor = DP-5
+spacing = 1
+padding-left = 2
+padding-rigth = 2
+module-margin-left = 2
+module-margin-right = 2
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+modules-left = i3
+modules-center = date
+modules-right = volume
 
-overline-size = 2
-overline-color = #f00
-underline-size = 2
-underline-color = #00f
+[bar/main]
 
-border-bottom = 0
-border-bottom-color = #333
+width = 100%
+height = 20
+override-redirect = false
 
 spacing = 1
-padding-left = 0
+padding-left = 2
 padding-right = 2
 module-margin-left = 2
 module-margin-right = 2
 
-font-0 = arimo:pixelsize=14
-modules-left = i3 mpd
+modules-left = bspwm
 modules-center = date
-modules-right = volume cpu eth
+modules-right = volume
+
+[module/bspwm]
+type = internal/bspwm
+format = <label-state>
 
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
-index-sort = true
-wrapping-scroll = false
 
 [module/date]
 type = internal/date
 interval = 5
 date = "%H:%M - %a - %m/%d"
-
-[module/cpu]
-type = internal/cpu
-interval = 2
-
-[module/eth]
-type = internal/network
-interface = enp0s31f6
-interval = 3
-label-connected = %local_ip%
-label-disconnected = offline
-
-[module/mpd]
-type = internal/mpd
-host = 127.0.0.1
-port = 6600
-interval = 2
 
 [module/volume]
 type = internal/volume
