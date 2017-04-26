@@ -170,7 +170,6 @@ new_window pixel 3
 # Autostart
 exec polybar i3-main &
 exec xrandr --dpi 96
-exec bars
 
 # Extra bindings
 bindsym $mod+p exec i3lock -e
